@@ -13,7 +13,7 @@ namespace QueryStack.Domain.Model.Users
 
         public static Expression<Func<User, bool>> AvailableUsers = (u) => u.Enabled && u.Age >= 18 && u.Status == RegisterStatus.APPROVED;
 
-        public static Expression<Func<User, bool>> AgeGratherThan(int age)
+        public static Expression<Func<User, bool>> AgeGreaterThan(int age)
         {
             return u => u.Age > age;
         }

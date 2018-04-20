@@ -71,9 +71,9 @@ namespace QueryStack.Test
         }
 
         [TestMethod]
-        public void AgeGratherThan()
+        public void AgeGreaterThan()
         {
-            var result = _userList.AsQueryable().Where(UserScope.AgeGratherThan(20));
+            var result = _userList.AsQueryable().Where(UserScope.AgeGreaterThan(20));
 
             Assert.AreEqual(2, result.Count());
             Assert.AreEqual(false, result.Any(x => x.Name == "User 1"));

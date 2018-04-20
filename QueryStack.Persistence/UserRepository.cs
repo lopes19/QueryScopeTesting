@@ -111,11 +111,11 @@ namespace QueryStack.Persistence
                 .ToList();
         }
 
-        public IEnumerable<User> GetUsersWhoseAgeIsGreatherThan(int age)
+        public IEnumerable<User> GetUsersWhoseAgeIsGreaterThan(int age)
         {
             return _context.Users
                 .AsNoTracking()
-                .Where(UserScope.AgeGratherThan(age))
+                .Where(UserScope.AgeGreaterThan(age))
                 .ToList();
         }
 
